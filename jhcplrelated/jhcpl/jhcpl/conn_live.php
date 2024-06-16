@@ -2,7 +2,7 @@
 //Database credentials for live server
     $dbname_live = 'xxx';
     $username_live = 'xxx';
-    $password_live = 'vvvvv';
+    $password_live = 'c&)WLGHiecg{';
 
     // Create connection to live server
     //$livehost = 'xxx0';
