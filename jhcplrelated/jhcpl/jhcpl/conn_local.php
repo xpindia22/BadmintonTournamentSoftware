@@ -13,9 +13,9 @@
 // }
 
  // Database credentials for WAMP server
- $dbname_local = 'jhcpl';
- $username_local = 'jhcpl';
- $password_local = 'jhcpl';
+ $dbname_local = 'ccc';
+ $username_local = 'ccc';
+ $password_local = 'ccc';
 
   // Create connection to WAMP server
   $localhost = 'localhost';
