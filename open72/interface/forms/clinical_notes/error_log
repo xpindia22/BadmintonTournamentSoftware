@@ -1,0 +1,10 @@
+[15-Apr-2024 09:18:24 Asia/Kolkata] PHP Fatal error:  Uncaught InvalidArgumentException: Record, form_id, pid, authorized and encounter must be populated in /home3/jameslkh/jhcpl.in/open72/src/Services/ClinicalNotesService.php:246
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/interface/forms/clinical_notes/save.php(103): OpenEMR\Services\ClinicalNotesService->saveArray(Array)
+#1 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/src/Services/ClinicalNotesService.php on line 246
+[15-Apr-2024 09:22:34 Asia/Kolkata] PHP Fatal error:  Uncaught InvalidArgumentException: Record, form_id, pid, authorized and encounter must be populated in /home3/jameslkh/jhcpl.in/open72/src/Services/ClinicalNotesService.php:246
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/interface/forms/clinical_notes/save.php(103): OpenEMR\Services\ClinicalNotesService->saveArray(Array)
+#1 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/src/Services/ClinicalNotesService.php on line 246

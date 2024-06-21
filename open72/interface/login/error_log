@@ -1,0 +1,43 @@
+[19-Dec-2023 11:58:45 Asia/Kolkata] OpenEMR Error : Decryption failed authentication.
+[19-Dec-2023 11:58:45 Asia/Kolkata] OpenEMR Error : Key in drive is not compatible (ie. can not be decrypted) with key in database - Exiting.
+[19-Dec-2023 11:58:59 Asia/Kolkata] OpenEMR Error : Decryption failed authentication.
+[19-Dec-2023 11:58:59 Asia/Kolkata] OpenEMR Error : Key in drive is not compatible (ie. can not be decrypted) with key in database - Exiting.
+[19-Dec-2023 11:59:35 Asia/Kolkata] OpenEMR Error : Decryption failed authentication.
+[19-Dec-2023 11:59:35 Asia/Kolkata] OpenEMR Error : Key in drive is not compatible (ie. can not be decrypted) with key in database - Exiting.
+[19-Dec-2023 12:00:41 Asia/Kolkata] OpenEMR Error : Decryption failed authentication.
+[19-Dec-2023 12:00:41 Asia/Kolkata] OpenEMR Error : Key in drive is not compatible (ie. can not be decrypted) with key in database - Exiting.
+[19-Dec-2023 12:01:41 Asia/Kolkata] OpenEMR Error : Decryption failed authentication.
+[19-Dec-2023 12:01:41 Asia/Kolkata] OpenEMR Error : Key in drive is not compatible (ie. can not be decrypted) with key in database - Exiting.
+[19-Dec-2023 12:02:33 Asia/Kolkata] OpenEMR Error : Decryption failed authentication.
+[19-Dec-2023 12:02:33 Asia/Kolkata] OpenEMR Error : Key in drive is not compatible (ie. can not be decrypted) with key in database - Exiting.
+[19-Dec-2023 12:10:51 Asia/Kolkata] OpenEMR Error : Decryption failed authentication.
+[19-Dec-2023 12:10:51 Asia/Kolkata] OpenEMR Error : Key in drive is not compatible (ie. can not be decrypted) with key in database - Exiting.
+[19-Dec-2023 06:57:37 UTC] PHP Fatal error:  Uncaught Error: Object of class Laminas\ServiceManager\ServiceManager could not be converted to string in /home3/jameslkh/public_html/open72/library/sql.inc.php:576
+Stack trace:
+#0 /home3/jameslkh/public_html/open72/library/sql.inc.php(576): implode(',', Array)
+#1 /home3/jameslkh/public_html/open72/library/sql.inc.php(346): HelpfulDie('query failed: S...', 'Table 'jameslkh...')
+#2 /home3/jameslkh/public_html/open72/custom/code_types.inc.php(212): sqlQuery('SELECT `revisio...')
+#3 /home3/jameslkh/public_html/open72/custom/code_types.inc.php(158): isSnomedSpanish()
+#4 /home3/jameslkh/public_html/open72/interface/modules/zend_modules/module/Carecoordination/src/Carecoordination/Model/EncounterccdadispatchTable.php(40): require_once('/home3/jameslkh...')
+#5 /home3/jameslkh/public_html/open72/vendor/laminas/laminas-loader/src/StandardAutoloader.php(309): include('/home3/jameslkh...')
+#6 /home3/jameslkh/public_html/open72/vendor/laminas/laminas-loader/src/StandardAutoloader.php(220): Laminas\Loader\StandardAutoloader->loadClass('Carecoordinatio...', 'namespaces')
+#7 /home3/jameslkh/public_html/open72/interface/modules/zend_modules/module/Carecoordination/config/module.config.php(158): Laminas\Loader\StandardAutoloader->autoload('Carecoordinatio...')
+#8 /home3/jameslkh/public_html/open72/vendor/laminas/laminas-servicemanager/src/ServiceManager.php(642): Carecoordination\Module->Carecoordination\{closure}(Object(Laminas\ServiceManager\ServiceManager), 'Carecoordinatio...', NULL)
+#9 /home3/jameslkh/public_html/open72/vendor/laminas/laminas-servicemanager/src/ServiceManager.php(264): Laminas\ServiceManager\ServiceManager->doCreate('Carecoordinatio...')
+#10 /home3/jameslkh/public_html/open72/interface/modules/zend_modules/module/Carecoordination/config/module.config.php(182): Laminas\ServiceManager\ServiceManager->get('Carecoordinatio...')
+#11 /home3/jameslkh/public_html/open72/vendor/laminas/laminas-servicemanager/src/ServiceManager.php(642): Carecoordination\Module->Carecoordination\{closure}(Object(Laminas\ServiceManager\ServiceManager), 'Carecoordinatio...', NULL)
+#12 /home3/jameslkh/public_html/open72/vendor/laminas/laminas-servicemanager/src/ServiceManager.php(264): Laminas\ServiceManager\ServiceManager->doCreate('Carecoordinatio...')
+#13 /home3/jameslkh/public_html/open72/interface/modules/zend_modules/module/Carecoordination/config/module.config.php(179): Laminas\ServiceManager\ServiceManager->get('Carecoordinatio...')
+#14 /home3/jameslkh/public_html/open72/vendor/laminas/laminas-servicemanager/src/ServiceManager.php(642): Carecoordination\Module->Carecoordination\{closure}(Object(Laminas\ServiceManager\ServiceManager), 'Carecoordinatio...', NULL)
+#15 /home3/jameslkh/public_html/open72/vendor/laminas/laminas-servicemanager/src/ServiceManager.php(264): Laminas\ServiceManager\ServiceManager->doCreate('Carecoordinatio...')
+#16 /home3/jameslkh/public_html/open72/interface/modules/zend_modules/module/Carecoordination/Module.php(71): Laminas\ServiceManager\ServiceManager->get('Carecoordinatio...')
+#17 /home3/jameslkh/public_html/open72/vendor/laminas/laminas-eventmanager/src/EventManager.php(320): Carecoordination\Module->onBootstrap(Object(Laminas\Mvc\MvcEvent))
+#18 /home3/jameslkh/public_html/open72/vendor/laminas/laminas-eventmanager/src/EventManager.php(170): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent))
+#19 /home3/jameslkh/public_html/open72/vendor/laminas/laminas-mvc/src/Application.php(148): Laminas\EventManager\EventManager->triggerEvent(Object(Laminas\Mvc\MvcEvent))
+#20 /home3/jameslkh/public_html/open72/src/Core/ModulesApplication.php(65): Laminas\Mvc\Application->bootstrap(Array)
+#21 /home3/jameslkh/public_html/open72/interface/globals.php(646): OpenEMR\Core\ModulesApplication->__construct(Object(OpenEMR\Core\Kernel), '/home3/jameslkh...', 'interface/modul...', 'zend_modules')
+#22 /home3/jameslkh/public_html/open72/interface/login/login.php(41): require_once('/home3/jameslkh...')
+#23 {main}
+  thrown in /home3/jameslkh/public_html/open72/library/sql.inc.php on line 576
+[19-Dec-2023 12:41:09 Asia/Kolkata] OpenEMR Error : Decryption failed authentication.
+[19-Dec-2023 12:41:09 Asia/Kolkata] OpenEMR Error : Key in drive is not compatible (ie. can not be decrypted) with key in database - Exiting.

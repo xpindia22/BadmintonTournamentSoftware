@@ -1,0 +1,6 @@
+[12-Apr-2024 07:54:09 UTC] PHP Warning:  Undefined array key "site_id" in /home3/jameslkh/jhcpl.in/open72/library/auth.inc.php on line 127
+[12-Apr-2024 07:54:09 UTC] PHP Warning:  Undefined array key "site_id" in /home3/jameslkh/jhcpl.in/open72/library/auth.inc.php on line 127
+[25-Apr-2024 11:37:48 UTC] PHP Warning:  Undefined array key "site_id" in /home3/jameslkh/jhcpl.in/open72/library/auth.inc.php on line 127
+[25-Apr-2024 11:37:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jameslkh/jhcpl.in/open72/library/auth.inc.php:127) in /home3/jameslkh/jhcpl.in/open72/src/Common/Session/SessionUtil.php on line 254
+[29-Apr-2024 03:32:44 UTC] PHP Warning:  Undefined array key "site_id" in /home3/jameslkh/jhcpl.in/open72/library/auth.inc.php on line 127
+[29-Apr-2024 03:32:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jameslkh/jhcpl.in/open72/library/auth.inc.php:127) in /home3/jameslkh/jhcpl.in/open72/src/Common/Session/SessionUtil.php on line 254

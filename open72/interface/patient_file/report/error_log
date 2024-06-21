@@ -1,0 +1,231 @@
+[25-Apr-2024 11:38:08 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[25-Apr-2024 11:39:51 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[25-Apr-2024 11:40:23 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[25-Apr-2024 11:41:15 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[25-Apr-2024 17:04:02 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[29-Apr-2024 08:57:36 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[29-Apr-2024 08:58:42 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[29-Apr-2024 17:43:40 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[29-Apr-2024 17:46:05 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[29-Apr-2024 17:47:09 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[29-Apr-2024 17:49:18 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[30-Apr-2024 11:49:04 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[30-Apr-2024 11:50:17 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[30-Apr-2024 11:51:40 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[30-Apr-2024 11:53:23 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[30-Apr-2024 17:50:04 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[02-May-2024 09:27:01 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[02-May-2024 11:54:43 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[02-May-2024 11:55:54 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[02-May-2024 18:15:56 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
+[02-May-2024 18:15:57 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + float in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php:6535
+Stack trace:
+#0 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(16061): Mpdf\Mpdf->finishFlowingBlock(true)
+#1 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag/BlockTag.php(234): Mpdf\Mpdf->printbuffer(Array, 0)
+#2 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\BlockTag->open(Array, Array, 1)
+#3 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13921): Mpdf\Tag->OpenTag('DIV', Array, Array, 1)
+#4 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(12500): Mpdf\Mpdf->WriteHTML('<div style="tex...', 4)
+#5 /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php(13447): Mpdf\Mpdf->_getHtmlHeight('<div style="tex...')
+#6 /home3/jameslkh/jhcpl.in/open72/interface/patient_file/report/custom_report.php(870): Mpdf\Mpdf->WriteHTML(' <div class="co...')
+#7 {main}
+  thrown in /home3/jameslkh/jhcpl.in/open72/vendor/mpdf/mpdf/src/Mpdf.php on line 6535
