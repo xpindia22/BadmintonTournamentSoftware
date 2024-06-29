@@ -1,6 +1,0 @@
-[19-Dec-2023 11:51:05 Asia/Kolkata] OpenEMR Error : Decryption failed authentication.
-[19-Dec-2023 11:51:05 Asia/Kolkata] OpenEMR Error : Key in drive is not compatible (ie. can not be decrypted) with key in database - Exiting.
-[19-Dec-2023 12:36:54 Asia/Kolkata] OpenEMR Error : Decryption failed authentication.
-[19-Dec-2023 12:36:54 Asia/Kolkata] OpenEMR Error : Key in drive is not compatible (ie. can not be decrypted) with key in database - Exiting.
-[09-Jan-2024 11:32:51 Asia/Kolkata] ERROR: OpenEMR SQL Escaping ERROR of the following string: DATE
-[09-Jan-2024 11:33:16 Asia/Kolkata] ERROR: OpenEMR SQL Escaping ERROR of the following string: DATE
