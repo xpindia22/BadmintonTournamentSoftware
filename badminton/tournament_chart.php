@@ -1,41 +1,32 @@
 <?php
-// Database connection configuration
-$host = 'localhost'; // Your database host
-$dbname = 'badminton'; // Your database name
-$username = 'root'; // Your database username
-$password = ''; // Your database password
+require_once 'config.php';
 
-// Create connection
-$conn = new mysqli($host, $username, $password, $dbname);
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch match scores
-$sql = "SELECT m.round, p1.player_name AS player1, p2.player_name AS player2,
+$sql = "SELECT m.match_id, m.round, p1.player_name AS player1, p2.player_name AS player2,
         ms.player1_set1, ms.player1_set2, ms.player1_set3,
-        ms.player2_set1, ms.player2_set2, ms.player2_set3
-        FROM match_scores ms
-        JOIN matches m ON ms.match_id = m.match_id
-        JOIN players p1 ON m.player1_id = p1.player_id
-        JOIN players p2 ON m.player2_id = p2.player_id";
+        ms.player2_set1, ms.player2_set2, ms.player2_set3, m.match_date
+        FROM matches m
+        LEFT JOIN players p1 ON m.player1_id = p1.player_id
+        LEFT JOIN players p2 ON m.player2_id = p2.player_id
+        LEFT JOIN match_scores ms ON m.match_id = ms.match_id
+        ORDER BY FIELD(m.round, 'Quarter-finals Pool 1', 'Quarter-finals Pool 2', 'Semi-finals Pool 1', 'Semi-finals Pool 2', 'Finals')";
 $result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo "<h3>Match Round: " . $row['round'] . "</h3>";
-        echo "<p>" . $row['player1'] . ":<br>";
-        echo $row['player1_set1'] . "-" . $row['player2_set1'] . "<br>";
-        echo $row['player1_set2'] . "-" . $row['player2_set2'] . "<br>";
-        echo $row['player1_set3'] . "-" . $row['player2_set3'] . "</p>";
-        echo "<p>" . $row['player2'] . "</p>";
-    }
-} else {
-    echo "No matches found.";
-}
-
-// Close connection
-$conn->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tournament Chart</title>
+</head>
+<body>
+    <h2>Tournament Chart</h2>
+    <?php while ($row = $result->fetch_assoc()) : ?>
+        <div>
+            <h3><?php echo $row['round']; ?></h3>
+            <p><?php echo $row['player1']; ?>: <?php echo $row['player1_set1'] . '-' . $row['player2_set1'] . ', ' . $row['player1_set2'] . '-' . $row['player2_set2'] . ', ' . $row['player1_set3'] . '-' . $row
