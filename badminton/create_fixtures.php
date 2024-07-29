@@ -1,32 +1,38 @@
 <?php
-require_once 'conn.php';
+require_once 'config.php';
 
 function createFixtures($players) {
     $total_players = count($players);
     shuffle($players);
 
     $rounds = [];
-
+    
     if ($total_players > 8) {
-        $initial_round_matches = array_chunk($players, 2);
-        $rounds['Initial Round'] = $initial_round_matches;
-        $remaining_players = $total_players - (count($initial_round_matches) * 2);
-        if ($remaining_players < 8) {
-            $players = array_merge(...$initial_round_matches);
-        } else {
-            $players = $remaining_players;
+        $preliminary_matches = [];
+        while (count($players) > 8) {
+            $preliminary_matches[] = [array_pop($players), array_pop($players)];
         }
+        $rounds['Preliminary Round'] = $preliminary_matches;
     }
 
-    if ($total_players <= 2) {
-        $round = "Final";
-        $rounds[$round] = [[$players[0], $players[1]]];
-    } elseif ($total_players <= 4) {
-        $round = "Semi-final";
-        $rounds[$round] = array_chunk($players, 2);
-    } else {
-        $round = "Quarter-final";
-        $rounds[$round] = array_chunk($players, 2);
+    if ($total_players >= 8) {
+        $rounds['Quarter-finals'] = array_chunk($players, 2);
+    }
+
+    if ($total_players >= 4) {
+        $semi_final_players = [];
+        foreach ($rounds['Quarter-finals'] as $match) {
+            $semi_final_players = array_merge($semi_final_players, $match);
+        }
+        $rounds['Semi-finals'] = array_chunk($semi_final_players, 2);
+    }
+
+    if ($total_players >= 2) {
+        $final_players = [];
+        foreach ($rounds['Semi-finals'] as $match) {
+            $final_players = array_merge($final_players, $match);
+        }
+        $rounds['Finals'] = [$final_players];
     }
 
     return $rounds;

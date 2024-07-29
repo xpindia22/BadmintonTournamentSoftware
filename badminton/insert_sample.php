@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once 'conn.php';
 
 $sample_players = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Hannah'];
 
