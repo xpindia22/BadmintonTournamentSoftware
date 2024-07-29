@@ -1,34 +1,36 @@
+ 
 <?php
 require_once 'config.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $player_name = $_POST['player_name'];
-    $sql = "INSERT INTO players (player_name) VALUES (?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $player_name);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $playerName = $_POST['player_name'];
+    $stmt = $conn->prepare('INSERT INTO players (player_name) VALUES (?)');
+    $stmt->bind_param('s', $playerName);
     $stmt->execute();
-    echo "Player added successfully!";
-    header("Location: add_player.php"); // Redirect to the same page or wherever appropriate
-    exit();
 }
+
+$players = $conn->query('SELECT * FROM players')->fetch_all(MYSQLI_ASSOC);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Player</title>
+    <title>Player Registration</title>
 </head>
 <body>
-    <header>
-        <h1>Add Player</h1>
-    </header>
-    <section>
-        <form method="POST" action="add_player.php">
-            <label for="player_name">Player Name:</label>
-            <input type="text" id="player_name" name="player_name" required>
-            <button type="submit">Add Player</button>
-        </form>
-    </section>
+    <h1>Register Player</h1>
+    <form method="POST">
+        <input type="text" name="player_name" required>
+        <button type="submit">Register</button>
+    </form>
+    
+    <h2>Registered Players</h2>
+    <ul>
+        <?php foreach ($players as $player): ?>
+            <li><?php echo htmlspecialchars($player['player_name']); ?></li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$user = "mydb";
-$pwd = "mydb";//password should never be left blank on a live server.
-$db = "mydb";
+$user = "root";
+$pwd = "";//password should never be left blank on a live server.
+$db = "badminton";
 
 // Create connection
 $conn = new mysqli($host, $user, $pwd, $db);

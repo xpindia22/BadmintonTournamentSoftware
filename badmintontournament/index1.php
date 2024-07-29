@@ -1,17 +1,23 @@
 <?php
 require_once 'config.php';
-$result = $conn->query("SELECT match_id, round, p1.player_name AS player1, p2.player_name AS player2, player1_score1, player1_score2, player1_score3, player2_score1, player2_score2, player2_score3, match_date FROM matches LEFT JOIN players p1 ON matches.player1_id = p1.player_id LEFT JOIN players p2 ON matches.player2_id = p2.player_id ORDER BY FIELD(round, 'Pre-Quarter-finals', 'Quarter-finals', 'Semi-finals', 'Finals')");
 
-function getPlayers($conn) {
-    $result = $conn->query("SELECT * FROM players");
+// Fetching fixtures from the database
+function getFixtures($conn) {
+    $query = 'SELECT m.match_id, m.round, p1.player_name AS player1, p2.player_name AS player2, 
+              m.player1_set1 AS player1_set1, m.player1_set2 AS player1_set2, m.player1_set3 AS player1_set3, 
+              m.player2_set1 AS player2_set1, m.player2_set2 AS player2_set2, m.player2_set3 AS player2_set3, 
+              m.match_date 
+              FROM matches m 
+              LEFT JOIN players p1 ON m.player1_id = p1.player_id 
+              LEFT JOIN players p2 ON m.player2_id = p2.player_id 
+              ORDER BY FIELD(m.round, \'Pre-Quarter-finals\', \'Quarter-finals\', \'Semi-finals\', \'Finals\')';
+    $result = $conn->query($query);
     return $result->fetch_all(MYSQLI_ASSOC);
 }
 
-function getMatches($conn) {
-    $result = $conn->query("SELECT * FROM matches");
-    return $result->fetch_all(MYSQLI_ASSOC);
-}
+$fixtures = getFixtures($conn);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,14 +29,15 @@ function getMatches($conn) {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        header, section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
+        h1, h2 {
+            margin: 0 0 10px;
         }
     </style>
 </head>
@@ -39,38 +46,23 @@ function getMatches($conn) {
         <h1>Badminton Tournament</h1>
     </header>
 
-    <!-- Players section -->
-    <section class="players">
-        <h2>Players</h2>
-        <?php
-        $players = getPlayers($conn);
-        foreach ($players as $player) {
-            echo "<p>{$player['player_name']}</p>";
-        }
-        ?>
-    </section>
-
-    <!-- Matches section -->
-    <section class="matches">
-        <h2>Matches</h2>
-        <table>
-            <tr>
-                <th>Round</th>
-                <th>Player 1</th>
-                <th>Player 2</th>
-                <th>Scores</th>
-                <th>Match Date</th>
-            </tr>
-            <?php while ($row = $result->fetch_assoc()): ?>
-                <tr>
-                    <td><?php echo $row['round']; ?></td>
-                    <td><?php echo $row['player1']; ?></td>
-                    <td><?php echo $row['player2']; ?></td>
-                    <td><?php echo "{$row['player1_score1']}-{$row['player2_score1']}, {$row['player1_score2']}-{$row['player2_score2']}, {$row['player1_score3']}-{$row['player2_score3']}"; ?></td>
-                    <td><?php echo $row['match_date']; ?></td>
-                </tr>
-            <?php endwhile; ?>
-        </table>
+    <section class="fixtures">
+        <h2>Fixtures</h2>
+        <?php if (empty($fixtures)) : ?>
+            <p>No fixtures available.</p>
+        <?php else : ?>
+            <?php foreach ($fixtures as $fixture) : ?>
+                <p>
+                    <strong><?php echo htmlspecialchars($fixture['round']); ?>:</strong> 
+                    <?php echo htmlspecialchars($fixture['player1']); ?> 
+                    <?php echo htmlspecialchars($fixture['player1_set1']); ?>-<?php echo htmlspecialchars($fixture['player2_set1']); ?> 
+                    <?php echo htmlspecialchars($fixture['player1_set2']); ?>-<?php echo htmlspecialchars($fixture['player2_set2']); ?> 
+                    <?php echo htmlspecialchars($fixture['player1_set3']); ?>-<?php echo htmlspecialchars($fixture['player2_set3']); ?> 
+                    <?php echo htmlspecialchars($fixture['player2']); ?> - 
+                    <?php echo htmlspecialchars($fixture['match_date']); ?>
+                </p>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </section>
 
     <footer>
