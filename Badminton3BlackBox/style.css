@@ -1,0 +1,29 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .qualifying-rounds, .quarter-finals, .semi-finals, .finals {
+    margin-bottom: 20px;
+  }
+  
+  .pool-a, .pool-b {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  #finals-match {
+    font-size: 24px;
+    font-weight: bold;
+  }
