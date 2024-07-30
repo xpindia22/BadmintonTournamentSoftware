@@ -94,9 +94,9 @@ $matches = getMatches($conn);
         <button type="submit" name="create_match">Create Match</button>
     </form>
 
-    <h2>Auto-generate Fixtures</h2>
+    <h2>Auto-Generate Fixtures</h2>
     <form method="POST" action="enter_score.php">
-        <button type="submit" name="auto_generate">Auto-generate Fixtures</button>
+        <button type="submit" name="auto_generate">Auto-Generate Fixtures</button>
     </form>
 </body>
 </html>
