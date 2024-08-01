@@ -1,13 +1,15 @@
 <?php
 require_once 'config.php';
 
+// Fetch fixtures from the database
 function getFixtures($conn) {
     $query = 'SELECT m.match_id, m.round, m.pool, p1.player_name AS player1, p2.player_name AS player2, 
-              m.player1_set1, m.player1_set2, m.player1_set3, m.player2_set1, m.player2_set2, m.player2_set3, m.winner_id, m.match_date 
+              m.player1_set1, m.player1_set2, m.player1_set3, m.player2_set1, m.player2_set2, m.player2_set3, 
+              m.winner_id, m.match_date 
               FROM matches m 
               LEFT JOIN players p1 ON m.player1_id = p1.player_id 
               LEFT JOIN players p2 ON m.player2_id = p2.player_id 
-              ORDER BY FIELD(m.round, "Qualifying", "Quarter-finals", "Semi-finals", "Finals"), m.match_date';
+              ORDER BY FIELD(m.round, "Pre-Quarter-finals", "Quarter-finals", "Semi-finals", "Finals"), m.match_date';
     $result = $conn->query($query);
     if (!$result) {
         die('Query failed: ' . $conn->error);
@@ -17,6 +19,7 @@ function getFixtures($conn) {
 
 $fixtures = getFixtures($conn);
 
+// Create fixtures for the next round
 function createNextRoundFixtures($conn, $currentRound, $nextRound) {
     $query = 'SELECT winner_id FROM matches WHERE round = ? AND winner_id IS NOT NULL';
     $stmt = $conn->prepare($query);
@@ -28,20 +31,71 @@ function createNextRoundFixtures($conn, $currentRound, $nextRound) {
     $winners = array_column($winners, 'winner_id');
     for ($i = 0; $i < count($winners); $i += 2) {
         if (isset($winners[$i + 1])) {
-            $query = 'INSERT INTO matches (round, player1_id, player2_id) VALUES (?, ?, ?)';
+            $query = 'INSERT INTO matches (round, pool, player1_id, player2_id) VALUES (?, ?, ?, ?)';
             $stmt = $conn->prepare($query);
-            $stmt->bind_param('sii', $nextRound, $winners[$i], $winners[$i + 1]);
+            $pool = ($i % 2 == 0) ? 'A' : 'B'; // Alternate pools for next round
+            $stmt->bind_param('ssii', $nextRound, $pool, $winners[$i], $winners[$i + 1]);
             $stmt->execute();
         }
     }
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $rounds = ['Qualifying' => 'Quarter-finals', 'Quarter-finals' => 'Semi-finals', 'Semi-finals' => 'Finals'];
+// Assign players to pools and create initial fixtures
+function assignPlayersToPools($conn) {
+    $pools = ['A', 'B'];
+    $players = [];
+
+    // Fetch players from the database
+    $query = 'SELECT player_id FROM players';
+    $result = $conn->query($query);
+
+    while ($row = $result->fetch_assoc()) {
+        $players[] = $row['player_id'];
+    }
+
+    // Shuffle and split players into pools
+    shuffle($players);
+    $poolA = array_slice($players, 0, 8);
+    $poolB = array_slice($players, 8, 8);
+
+    // Insert fixtures for Pre-Quarter-finals
+    $round = 'Pre-Quarter-finals';
+
+    foreach ([$poolA, $poolB] as $index => $pool) {
+        $poolName = $pools[$index];
+        for ($i = 0; $i < count($pool); $i += 2) {
+            if (isset($pool[$i + 1])) {
+                $query = 'INSERT INTO matches (round, pool, player1_id, player2_id) VALUES (?, ?, ?, ?)';
+                $stmt = $conn->prepare($query);
+                $stmt->bind_param('ssii', $round, $poolName, $pool[$i], $pool[$i + 1]);
+                $stmt->execute();
+            }
+        }
+    }
+
+    // Update the settings table to indicate fixtures have been created
+    $query = 'UPDATE settings SET value = "yes" WHERE key_name = "fixtures_created"';
+    $conn->query($query);
+
+    echo "Players assigned to pools and fixtures created successfully!";
+}
+
+function fixturesCreated($conn) {
+    $query = 'SELECT value FROM settings WHERE key_name = "fixtures_created"';
+    $result = $conn->query($query);
+    if ($result) {
+        $row = $result->fetch_assoc();
+        return $row['value'] === 'yes';
+    }
+    return false;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !fixturesCreated($conn)) {
+    assignPlayersToPools($conn);
+    $rounds = ['Pre-Quarter-finals' => 'Quarter-finals', 'Quarter-finals' => 'Semi-finals', 'Semi-finals' => 'Finals'];
     foreach ($rounds as $currentRound => $nextRound) {
         createNextRoundFixtures($conn, $currentRound, $nextRound);
     }
-    echo "Fixtures created for the next rounds!";
 }
 ?>
 
@@ -81,12 +135,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </header>
 
     <form method="POST" action="">
-        <button type="submit">Create Next Round Fixtures</button>
+        <?php if (!fixturesCreated($conn)) : ?>
+            <button type="submit">Create Fixtures</button>
+        <?php else : ?>
+            <p>Fixtures have already been created.</p>
+        <?php endif; ?>
     </form>
 
     <div class="row">
         <?php 
-        $rounds = ["Qualifying", "Quarter-finals", "Semi-finals", "Finals"];
+        $rounds = ["Pre-Quarter-finals", "Quarter-finals", "Semi-finals", "Finals"];
         foreach ($rounds as $round) : ?>
             <div class="column">
                 <h2><?php echo $round; ?></h2>
